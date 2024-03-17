@@ -88,12 +88,6 @@ optionEl.addEventListener("input", (e) => {
   const digitValue = e.target.value;
   digit = digitValue;
   length.innerText = digitValue;
-
-  // if (inputField.value.length > digit) {
-  //   lengthEl.classList.add("textColor");
-  // } else {
-  //   lengthEl.classList.remove("textColor");
-  // }
 });
 
 // reset
