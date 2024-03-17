@@ -9,10 +9,104 @@
       type="image/x-icon"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <title>Password Strength Checker</title>
+    <style>
+      .textColor {
+        color: green !important;
+      }
+    </style>
   </head>
   <!--body -->
-  <body>
+  <body class="bg-white h-screen flex justify-center items-center w-full p-3">
+    <!-- Container -->
+    <div
+      class="border-4 border-gray-800 bg-transparent p-10 rounded-md space-y-2 flex flex-col items-center"
+    >
+      <!-- Title -->
+      <h1 class="text-center capitalize text-2xl shadow-md p-3 bg-gray-200">
+        password Strenth Checker
+      </h1>
+      <!-- Form Box -->
+      <div class="overflow-hidden rounded-md w-full flex gap-[2px]">
+        <input
+          type="text"
+          id="inputField"
+          class="px-2 py-2 m-0 w-full bg-gray-200 placeholder:text-gray-400 focus:outline-none"
+          placeholder="password here"
+        />
+
+        <select
+          class="px-2 py-2 bg-gray-200 focus:outline-none inline-block m-o"
+          id="options"
+        >
+          <option selected value="6">6</option>
+          <option value="8">8</option>
+          <option value="12">12</option>
+          <option value="16">16</option>
+        </select>
+      </div>
+      <!-- Hint Box -->
+      <div>
+        <div id="space" class="text-sm space-x-2 text-gray-400">
+          <i class="fa-solid fa-xmark"></i
+          ><span> Password cannot contain spaces </span>
+        </div>
+        <div id="lengthEl" class="text-sm space-x-2 text-gray-400">
+          <i class="fa-solid fa-check"></i
+          ><span>
+            Password must be <span id="length">6</span> digit Long.
+          </span>
+        </div>
+        <div id="number" class="text-sm space-x-2 text-gray-400">
+          <i class="fa-solid fa-check"></i
+          ><span> Password must be 1 number. </span>
+        </div>
+        <div id="upper" class="text-sm space-x-2 text-gray-400">
+          <i class="fa-solid fa-check"></i
+          ><span> Password must be 1 uppercase letter </span>
+        </div>
+        <div id="lower" class="text-sm space-x-2 text-gray-400">
+          <i class="fa-solid fa-check"></i
+          ><span> Password must be 1 lowercase letter </span>
+        </div>
+        <div id="special" class="text-sm space-x-2 text-gray-400">
+          <i class="fa-solid fa-check"></i
+          ><span> Password must be 1 special character. </span>
+        </div>
+      </div>
+      <!-- button Box -->
+      <div class="flex gap-[5px] w-full">
+        <button
+          type="button"
+          id="copy-btn"
+          disabled
+          class="py-1 px-2 cursor-pointer bg-green-500 min-w-max text-white rounded-sm flex justify-center items-center gap-2 w-full active:bg-green-700 disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+        >
+          Copy Password
+          <span>
+            <i class="fa-regular fa-copy"></i>
+          </span>
+        </button>
+        <button
+          type="button"
+          id="reset-btn"
+          class="py-1 px-2 bg-red-500 min-w-max text-white rounded-sm flex justify-center items-center gap-2 w-full active:bg-red-700"
+        >
+          Reset
+          <span>
+            <i class="fa-solid fa-broom"></i>
+          </span>
+        </button>
+      </div>
+      <!-- warning text -->
+      <p id="warning" class="text-red-600 px-1 mt-2 hidden rounded-sm w-full">
+        <i class="fa-solid fa-xmark mr-1"></i>Sorry, Password Cannot Copied.
+      </p>
+    </div>
     <!-- JS Connected -->
     <script src="./js/script.js"></script>
   </body>
