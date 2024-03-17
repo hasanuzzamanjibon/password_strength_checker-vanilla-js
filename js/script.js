@@ -76,7 +76,7 @@ inputField.addEventListener("keyup", (event) => {
   /*=====================================
          Check special Character 
   =====================================*/
-  if (paswordValue.search(/(?=.*?[#?!@$%^&*-])/) !== -1) {
+  if (paswordValue.search(/(?=.*?[#?!@$%^&*৳+()"':;/~`|√π÷×{}£℅°_=[\]><\©®-])/) !== -1) {
     specialEl.classList.add("textColor");
   } else {
     specialEl.classList.remove("textColor");
