@@ -21,26 +21,28 @@
     </style>
   </head>
   <!--body -->
-  <body class="bg-white h-screen flex justify-center items-center w-full p-3">
+  <body
+    class="bg-gray-600 h-screen flex justify-center items-center w-full p-3"
+  >
     <!-- Container -->
     <div
-      class="border-4 border-gray-800 bg-transparent p-10 rounded-md space-y-2 flex flex-col items-center"
+      class="border-4 border-gray-800 bg-transparent p-10 rounded space-y-2 flex flex-col items-center"
     >
       <!-- Title -->
-      <h1 class="text-center capitalize text-2xl shadow-md p-3 bg-gray-200">
-        password Strenth Checker
+      <h1 class="text-center capitalize text-2xl shadow-md p-3 bg-gray-100">
+        Password Strength Checker
       </h1>
       <!-- Form Box -->
-      <div class="overflow-hidden rounded-md w-full flex gap-[2px]">
+      <div class="overflow-hidden rounded w-full flex gap-[2px]">
         <input
           type="text"
           id="inputField"
-          class="px-2 py-2 m-0 w-full bg-gray-200 placeholder:text-gray-400 focus:outline-none"
+          class="px-2 py-2 m-0 w-full bg-gray-100 placeholder:text-gray-400 focus:outline-none"
           placeholder="password here"
         />
 
         <select
-          class="px-2 py-2 bg-gray-200 focus:outline-none inline-block m-o"
+          class="px-2 py-2 bg-gray-100 focus:outline-none inline-block m-o"
           id="options"
         >
           <option selected value="6">6</option>
@@ -50,30 +52,30 @@
         </select>
       </div>
       <!-- Hint Box -->
-      <div>
-        <div id="space" class="text-sm space-x-2 text-gray-400">
+      <div class="w-full">
+        <div id="space" class="text-sm space-x-2 text-gray-300">
           <i class="fa-solid fa-xmark"></i
           ><span> Password cannot contain spaces </span>
         </div>
-        <div id="lengthEl" class="text-sm space-x-2 text-gray-400">
+        <div id="lengthEl" class="text-sm space-x-2 text-gray-300">
           <i class="fa-solid fa-check"></i
           ><span>
             Password must be <span id="length">6</span> digit Long.
           </span>
         </div>
-        <div id="number" class="text-sm space-x-2 text-gray-400">
+        <div id="number" class="text-sm space-x-2 text-gray-300">
           <i class="fa-solid fa-check"></i
           ><span> Password must be 1 number. </span>
         </div>
-        <div id="upper" class="text-sm space-x-2 text-gray-400">
+        <div id="upper" class="text-sm space-x-2 text-gray-300">
           <i class="fa-solid fa-check"></i
           ><span> Password must be 1 uppercase letter </span>
         </div>
-        <div id="lower" class="text-sm space-x-2 text-gray-400">
+        <div id="lower" class="text-sm space-x-2 text-gray-300">
           <i class="fa-solid fa-check"></i
           ><span> Password must be 1 lowercase letter </span>
         </div>
-        <div id="special" class="text-sm space-x-2 text-gray-400">
+        <div id="special" class="text-sm space-x-2 text-gray-300">
           <i class="fa-solid fa-check"></i
           ><span> Password must be 1 special character. </span>
         </div>
@@ -84,7 +86,7 @@
           type="button"
           id="copy-btn"
           disabled
-          class="py-1 px-2 cursor-pointer bg-green-500 min-w-max text-white rounded-sm flex justify-center items-center gap-2 w-full active:bg-green-700 disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+          class="py-1 px-2 cursor-pointer bg-green-500 min-w-max text-white rounded-sm flex justify-center items-center gap-2 w-full active:bg-green-700 disabled:bg-gray-100 disabled:text-gray-300 disabled:cursor-not-allowed"
         >
           Copy Password
           <span>
@@ -94,7 +96,7 @@
         <button
           type="button"
           id="reset-btn"
-          class="py-1 px-2 bg-red-500 min-w-max text-white rounded-sm flex justify-center items-center gap-2 w-full active:bg-red-700"
+          class="py-1 px-2 bg-red-500 min-w-max text-white rounded-sm flex justify-center items-center gap-2 active:bg-red-700"
         >
           Reset
           <span>
